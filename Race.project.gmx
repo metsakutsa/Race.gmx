@@ -23,8 +23,8 @@
     <script>scripts\roll_result.gml</script>
     <scripts name="States">
       <script>scripts\state_idle.gml</script>
-      <script>scripts\state_player1_roll.gml</script>
-      <script>scripts\state_player1_move.gml</script>
+      <script>scripts\state_player_roll.gml</script>
+      <script>scripts\state_player_move.gml</script>
       <script>scripts\state_ai_roll.gml</script>
       <script>scripts\state_ai_move.gml</script>
     </scripts>

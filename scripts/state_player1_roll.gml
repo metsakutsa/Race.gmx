@@ -12,8 +12,8 @@ if !instance_exists(o_roll_btn){
             draw_message(string(roll),3);
             alarm[0] = room_speed * 3;
             
-            o_player1.roll = roll;
-            o_player1.destination = o_player1.position + roll;
+            argument0.roll = roll;
+            argument0.destination = argument0.position + roll;
         }
     }
 }

@@ -1,7 +1,7 @@
-///state_player1_move(roll);
+///state_player1_move(player);
 
 
-with o_player1 {
+with argument0 {
     if destination > position {
         var next = position + 1;
         if x != ds_list_find_value(o_track.track,next).x {
@@ -14,7 +14,14 @@ with o_player1 {
     } else if isMoving{
         isMoving = false;
         o_run_animation.alarm[0] = room_speed * 1;
-        o_run_animation.next = states.player2_roll;
+        
+        //Go to next state, depending on whose turn it is
+        switch argument0 {
+            case o_player1: o_run_animation.next = states.player2_roll; break;
+            case o_player2: o_run_animation.next = states.player3_roll; break;
+            case o_player3: o_run_animation.next = states.player4_roll; break;
+            case o_player4: o_run_animation.next = states.player1_roll; break;
+        }
     }
     
     if isMoving and not instance_exists(o_run_animation){

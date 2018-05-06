@@ -70,17 +70,17 @@ enum states {
 switch (state) {
     case states.idle: state_idle(); break;
 
-    case states.player1_roll: state_player1_roll(); break;
-    case states.player1_move: state_player1_move(o_player1.roll); break;
+    case states.player1_roll: state_player_roll(o_player1); break;
+    case states.player1_move: state_player_move(o_player1); break;
     
-    case states.player2_roll: state_ai_roll(); break;
-    case states.player2_move: state_ai_move(); break;
+    case states.player2_roll: state_player_roll(o_player2); break;
+    case states.player2_move: state_player_move(o_player2); break;
     
-    case states.player3_roll: state_ai_roll(); break;
-    case states.player3_move: state_ai_move(); break;
+    case states.player3_roll: state_player_roll(o_player3); break;
+    case states.player3_move: state_player_move(o_player3); break;
     
-    case states.player4_roll: state_ai_roll(); break;
-    case states.player4_move: state_ai_move(); break;
+    case states.player4_roll: state_player_roll(o_player4); break;
+    case states.player4_move: state_player_move(o_player4); break;
 }
 </string>
           </argument>
