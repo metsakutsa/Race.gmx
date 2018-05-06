@@ -33,6 +33,7 @@ position = 0;
 image_speed = 0;
 roll=0;
 destination = 0;
+isMoving = false;
 </string>
           </argument>
         </arguments>

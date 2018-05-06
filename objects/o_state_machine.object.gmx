@@ -73,14 +73,14 @@ switch (state) {
     case states.player1_roll: state_player1_roll(); break;
     case states.player1_move: state_player1_move(o_player1.roll); break;
     
-    case states.player2_roll: state_ai_roll(ai); break;
-    case states.player2_move: state_ai_move(ai); break;
+    case states.player2_roll: state_ai_roll(); break;
+    case states.player2_move: state_ai_move(); break;
     
-    case states.player3_roll: state_ai_roll(ai); break;
-    case states.player3_move: state_ai_move(ai); break;
+    case states.player3_roll: state_ai_roll(); break;
+    case states.player3_move: state_ai_move(); break;
     
-    case states.player4_roll: state_ai_roll(ai); break;
-    case states.player4_move: state_ai_move(ai); break;
+    case states.player4_roll: state_ai_roll(); break;
+    case states.player4_move: state_ai_move(); break;
 }
 </string>
           </argument>
@@ -107,12 +107,14 @@ switch (state) {
             <string>///Draw states
 
 draw_set_font(font_fsm);
-draw_set_halign(fa_left);
+draw_set_halign(fa_right);
 draw_set_valign(fa_top);
 draw_set_color(c_white);
 
-draw_text_outline(10,window_get_height()-30, "PREVIOUS STATE: " + string(previous_state), 2, c_black, 1);
-draw_text_outline(10,window_get_height()-60, "CURRENT STATE: " + string(state), 2, c_black, 1);
+draw_text_outline(window_get_width()-10,window_get_height()-30, "PREVIOUS STATE: " + string(previous_state), 2, c_black, 1);
+draw_text_outline(window_get_width()-10,window_get_height()-60, "CURRENT STATE: " + string(state), 2, c_black, 1);
+draw_text_outline(window_get_width()-10,window_get_height()-90, "POSITION: " + string(o_player1.position), 2, c_black, 1);
+draw_text_outline(window_get_width()-10,window_get_height()-120, "DESTINATION: " + string(o_player1.destination), 2, c_black, 1);
 </string>
           </argument>
         </arguments>

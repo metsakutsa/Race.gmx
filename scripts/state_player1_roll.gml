@@ -7,13 +7,13 @@ if !instance_exists(o_roll_btn){
     
     with o_roll_btn {
         if mouse_check_button_released(mb_left) and visible {
-            roll = irandom_range(1,6);
+            roll = irandom_range(1,4);
             visible = false;
             draw_message(string(roll),3);
             alarm[0] = room_speed * 3;
             
             o_player1.roll = roll;
-            o_player1.destination += roll;
+            o_player1.destination = o_player1.position + roll;
         }
     }
 }
